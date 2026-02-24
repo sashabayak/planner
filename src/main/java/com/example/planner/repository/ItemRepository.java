@@ -3,7 +3,6 @@ package com.example.planner.repository;
 import com.example.planner.entity.Item;
 import org.springframework.stereotype.Repository;
 
-//import java.util.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -47,7 +46,6 @@ public class ItemRepository {
         return items.values().stream()
                 .filter(i -> i.getName() != null && i.getName().toLowerCase().contains(lower))
                   .toList();
-//                .collect(Collectors.toList());
 
     }
 }
