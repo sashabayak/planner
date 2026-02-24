@@ -3,9 +3,13 @@ package com.example.planner.repository;
 import com.example.planner.entity.Item;
 import org.springframework.stereotype.Repository;
 
-import java.util.*;
+//import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Optional;
 import java.util.concurrent.atomic.AtomicLong;
-import java.util.stream.Collectors;
 
 @Repository
 public class ItemRepository {
@@ -42,6 +46,8 @@ public class ItemRepository {
         String lower = keyword.toLowerCase().trim();
         return items.values().stream()
                 .filter(i -> i.getName() != null && i.getName().toLowerCase().contains(lower))
-                .collect(Collectors.toList());
+                  .toList();
+//                .collect(Collectors.toList());
+
     }
 }
