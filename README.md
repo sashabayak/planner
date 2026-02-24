@@ -11,8 +11,9 @@ Planner — это полноценное RESTful веб-приложение д
 Аспектное логирование всех вызовов контроллеров (Before, After, AfterReturning, AfterThrowing)
 Простое in-memory кэширование сущностей (CacheService)  
 Глобальная обработка исключений (ObjectNotFoundException, BadRequestException, ObjectExistException)
-Swagger-документация API (OpenAPI 3)  
-Технологии:  
+Swagger-документация API (OpenAPI 3) 
+
+## Технологии:  
 
 Java 17/21  
 Spring Boot 3.x  
