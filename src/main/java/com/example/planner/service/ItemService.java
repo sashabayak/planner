@@ -1,0 +1,35 @@
+package com.example.planner.service;
+
+import com.example.planner.dto.ItemDTO;
+import com.example.planner.mapper.ItemMapper;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
+import com.example.planner.repository.ItemRepository;
+
+import java.util.List;
+import java.util.Optional;
+
+@Service
+@RequiredArgsConstructor
+public class ItemService {
+
+    private final ItemRepository repository;
+
+    public List<ItemDTO> getAllItems() {
+        return repository.findAll().stream()
+                .map(ItemMapper::toDto)
+                .toList();
+    }
+
+    public Optional<ItemDTO> getItemById(Long id) {
+        return repository.findById(id)
+                .map(ItemMapper::toDto);
+    }
+
+    public List<ItemDTO> searchItemsByName(String name) {
+        return repository.findByNameContainingIgnoreCase(name)
+                .stream()
+                .map(ItemMapper::toDto)
+                .toList();
+    }
+}
