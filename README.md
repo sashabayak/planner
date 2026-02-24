@@ -1,4 +1,4 @@
-Planner REST API
+# Planner REST API
 
 Planner — это полноценное RESTful веб-приложение для управления задачами, пользователями и группами.
 
