@@ -3,7 +3,12 @@ package com.example.planner.mapper;
 import com.example.planner.dto.ItemDTO;
 import com.example.planner.entity.Item;
 
+
+
 public class ItemMapper {
+
+    private ItemMapper() {
+    }
 
     public static ItemDTO toDto(Item item) {
         if (item == null) {
