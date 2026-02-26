@@ -1,9 +1,10 @@
 package com.example.planner.entity;
 
+import java.time.Instant;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import java.time.Instant;
+
 
 @Getter
 @Setter
