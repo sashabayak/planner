@@ -13,11 +13,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api/tasks")
-@RequiredArgsConstructor
+@RequiredArgsConstructor// ломбок
 public class ItemController {
 
   private final ItemService service;
-
   @GetMapping
   public List<ItemDTO> getTasks(
 	  @RequestParam(required = false, name = "name") String name) {
@@ -31,3 +30,4 @@ public class ItemController {
 		.orElseGet(() -> ResponseEntity.notFound().build());
   }
 }
+

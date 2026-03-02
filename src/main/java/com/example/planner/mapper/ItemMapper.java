@@ -12,8 +12,8 @@ public class ItemMapper {
 	if (item == null) {
 	  return null;
 	}
-	ItemDTO dto = new ItemDTO();
-	dto.setId(item.getId());
+	ItemDTO dto = new ItemDTO();//создаёт новый DTO
+	dto.setId(item.getId());//копирование
 	dto.setName(item.getName());
 	dto.setDescription(item.getDescription());
 	dto.setCompleted(item.isCompleted());
